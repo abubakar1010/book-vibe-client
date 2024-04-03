@@ -5,7 +5,6 @@ import {
   Typography,
   Button,
   IconButton,
-  Card,
 } from "@material-tailwind/react";
 import { NavLink } from "react-router-dom";
 

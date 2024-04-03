@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Banner = () => {
     return (
         <>
-            <div className=" bg-[rgba(19,19,19,0.05)] flex justify-between px-32 rounded-lg">
+            <div className=" bg-[rgba(19,19,19,0.05)] flex justify-between px-32 rounded-lg mt16 mb-28">
                 
                 <div className=" py-36 ">
 
