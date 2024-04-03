@@ -24,9 +24,12 @@ const NavBar = () => {
         as="li"
         variant="small"
         color="blue-gray"
-        className="p-1 font-normal"
+        className="p-1 font-normal text-lg"
       >
-        <NavLink to="" className="flex items-center text-lg">
+        <NavLink to=""  className={({isActive}) =>
+                                        `
+                                        ${isActive? "text-[#23BE0A] border border-[#23BE0A] px-3 rounded-md py-2": "text-[#131313CC] hover:text-[#23BE0A]"} `
+                                    }>
           Home
         </NavLink>
       </Typography>
@@ -36,7 +39,10 @@ const NavBar = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <NavLink to="listedBooks" className="flex items-center text-lg">
+        <NavLink to="/listedBooks" className={({isActive}) =>
+                                        `
+                                        ${isActive? "text-[#23BE0A] border border-[#23BE0A] px-3 rounded-md py-2": "text-[#131313CC] hover:text-[#23BE0A]"} `
+                                    } >
           Listed Books
         </NavLink>
       </Typography>
@@ -46,7 +52,10 @@ const NavBar = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <NavLink to="readBooks" className="flex items-center text-lg">
+        <NavLink to="/readBooks" className={({isActive}) =>
+                                        `
+                                        ${isActive? "text-[#23BE0A] border border-[#23BE0A] px-3 rounded-md py-2": "text-[#131313CC] hover:text-[#23BE0A]"} `
+                                    }>
           Pages To Read
         </NavLink>
       </Typography>

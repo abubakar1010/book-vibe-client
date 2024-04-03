@@ -1,19 +1,21 @@
 import PropTypes from "prop-types"
 import { IoMdStarOutline } from "react-icons/io";
+import { NavLink } from "react-router-dom";
 
 const Book = ({element}) => {
 
     console.log(element);
 
-    const {bookId, bookName, author, category, rating, tags, image} = element
+    const { bookId, bookName, author, category, rating, tags, image} = element
     return (
         <>
-            <div className=" border border-[rgba(19,19,19,0.15)] p-7 flex flex-col justify-center w-[374px]">
+            <NavLink to={`/bookDetails/${bookId}`}>
+            <div className=" border border-[rgba(19,19,19,0.15)] p-7 flex flex-col justify-center w-[374px] rounded-lg">
                 
 
                 
                 <div className=" bg-[#F3F3F3] flex justify-center py-5 rounded-lg w-full mb-7 ">
-                    <img src={image} alt="" className=" w-[134px] h-[166px] object-cover   " />
+                    <img src={image} alt="" className=" w-[114px] h-[166px] object-cover   " />
                 </div>
                 <div className=" flex gap-4 mb-4">
 
@@ -39,6 +41,7 @@ const Book = ({element}) => {
                 </div>
                 
             </div>
+            </NavLink>
         </>
     );
 };
