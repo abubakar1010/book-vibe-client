@@ -1,10 +1,30 @@
-import { Button } from "@material-tailwind/react";
+
 import { createBrowserRouter } from "react-router-dom";
+import Layout from "../Layout/Layout";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import Home from "../Pages/Home/Home";
+import ListedBooks from "../Pages/ListedBooks/ListedBooks";
+import PageToRead from "../Pages/PageToRead/PageToRead";
 
 const router = createBrowserRouter([
     {
       path: "/",
-      element: <Button>Hello World</Button>,
+      element: <Layout></Layout>,
+      errorElement: <ErrorPage></ErrorPage>,
+      children: [
+        {
+          path: "",
+          element: <Home></Home>
+        },
+        {
+          path: "listedBooks",
+          element: <ListedBooks />
+        },
+        {
+          path: "readBooks",
+          element: <PageToRead></PageToRead>
+        },
+      ]
     },
   ]);
 

@@ -27,7 +27,7 @@ const NavBar = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <NavLink className="flex items-center text-lg">
+        <NavLink to="" className="flex items-center text-lg">
           Home
         </NavLink>
       </Typography>
@@ -37,7 +37,7 @@ const NavBar = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <NavLink className="flex items-center text-lg">
+        <NavLink to="listedBooks" className="flex items-center text-lg">
           Listed Books
         </NavLink>
       </Typography>
@@ -47,7 +47,7 @@ const NavBar = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <NavLink className="flex items-center text-lg">
+        <NavLink to="readBooks" className="flex items-center text-lg">
           Pages To Read
         </NavLink>
       </Typography>
