@@ -1,9 +1,16 @@
 import PropTypes from "prop-types"
-import { NavLink } from "react-router-dom";
+
+import { saveData } from "../../Utils/LocalStorage";
 
 const DisplayBooksDetails = ({element}) => {
-
+    
     const { bookName, author, category, rating, tags, image,review, yearOfPublishing, publisher, totalPages} = element
+
+    const handleReadBooks = () => {
+
+        saveData(element)
+    }
+
     return (
         <>
             <div className=" flex gap-16 my-24 ">
@@ -45,14 +52,12 @@ const DisplayBooksDetails = ({element}) => {
                     </div>
 
                     <div className=" flex gap-4">
-                        <NavLink>
-                            <button className=" border px-6 py-2  border-[#23BE0A] text-[#23BE0A] hover:bg-[#23BE0A] hover:text-white rounded-md
+                        
+                            <button onClick={ () => handleReadBooks()} className="border px-8 text-[#23BE0A]  hover:text-white hover:bg-gradient-to-r from-[#22be0adb] via-[#22be0abc] to-[#23BE0A]  focus:outline-none focus:ring-cyan-300 border-[#23BE0A]  font-medium rounded-lg text-sm py-2.5 text-center me-2 mb-2
                             ">Read</button>
-                        </NavLink>
-                        <NavLink>
+                        
                             <button className=" border px-6  text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800  font-medium rounded-lg text-sm py-2.5 text-center me-2 mb-2
                             ">Wishlist</button>
-                        </NavLink>
                     </div>
                 </div>
             </div>
