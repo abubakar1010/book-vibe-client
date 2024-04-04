@@ -9,7 +9,7 @@ const Banner = () => {
                 <div className=" py-36 ">
 
                     <h1 className=" text-6xl font-bold  mb-9">Books to freshen up your bookshelf</h1>
-                    <NavLink>
+                    <NavLink  to="/listedBooks">
                         <button className="bg-[#23BE0A] py-4 px-7 rounded-lg text-white">View The List</button>
                     </NavLink>
 
