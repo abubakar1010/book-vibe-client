@@ -12,7 +12,8 @@ const saveData = (item) => {
         localStorage.setItem("readBooks",JSON.stringify(savedDataFromLocalStorage))
     }
 
-    
+    return exist
+
 }
 
 const GetData = () => {

@@ -1,14 +1,38 @@
 import PropTypes from "prop-types"
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { saveData } from "../../Utils/LocalStorage";
+import { saveWishlistData } from "../../Utils/wishlistLocalStorage";
 
 const DisplayBooksDetails = ({element}) => {
     
     const { bookName, author, category, rating, tags, image,review, yearOfPublishing, publisher, totalPages} = element
 
     const handleReadBooks = () => {
+        
+        const exist = saveData(element)
 
-        saveData(element)
+        if(exist){
+            toast.warn(
+                "Oops! It seems like you've already read this book. No need to add it again");
+        }else{
+            toast.success("Congratulations on finishing the book! Take a moment to enjoy your achievement")
+        }
+    }
+    const handleWishlistBooks = () => {
+        
+        const exist = saveWishlistData(element)
+
+        if(exist[1]){
+            toast.warn("Oops! It seems like you've already read this book. You can't add it to your wishlist again");
+        }
+        else if(exist[0]){
+            toast.warn(
+                "Oops! It seems like you've already added this book to your wishlist. No need to add it again");
+        }
+        else{
+            toast.success("Congratulations! You've added a new book to your wishlist. Happy reading!")
+        }
     }
 
     return (
@@ -56,11 +80,13 @@ const DisplayBooksDetails = ({element}) => {
                             <button onClick={ () => handleReadBooks()} className="border px-8 text-[#23BE0A]  hover:text-white hover:bg-gradient-to-r from-[#22be0adb] via-[#22be0abc] to-[#23BE0A]  focus:outline-none focus:ring-cyan-300 border-[#23BE0A]  font-medium rounded-lg text-sm py-2.5 text-center me-2 mb-2
                             ">Read</button>
                         
-                            <button className=" border px-6  text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800  font-medium rounded-lg text-sm py-2.5 text-center me-2 mb-2
+                            <button onClick={ () => handleWishlistBooks()} className=" border px-6  text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800  font-medium rounded-lg text-sm py-2.5 text-center me-2 mb-2
                             ">Wishlist</button>
                     </div>
                 </div>
+
             </div>
+                <ToastContainer />
         </>
     );
 };

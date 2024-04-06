@@ -4,7 +4,7 @@ import { PiBookThin } from "react-icons/pi";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 
-const ReadBooks = ({element}) => {
+const DisplayWishlist = ({element}) => {
     const { bookId, bookName, author, category, rating, tags, image, yearOfPublishing, publisher, totalPages} = element
     return (
         <div className="  shadow-lg rounded-lg py-8 px-7 flex gap-12  border border-[#13131326]">
@@ -54,9 +54,9 @@ const ReadBooks = ({element}) => {
     );
 };
 
-ReadBooks.propTypes = {
+DisplayWishlist.propTypes = {
 
     element: PropTypes.object
 }
 
-export default ReadBooks;
+export default DisplayWishlist;

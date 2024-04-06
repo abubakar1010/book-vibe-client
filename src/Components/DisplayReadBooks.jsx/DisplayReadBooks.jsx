@@ -5,13 +5,12 @@ import ReadBooks from "../ReadBooks/ReadBooks";
 
 const DisplayReadBooks = () => {
 
-    const data = GetData()
+    const data = GetData() || []
 
     console.log(data);
     return (
         <>
             <div>
-                <Button>Read Books</Button>
 
                 <div className=" my-16  space-y-12">
                     {
