@@ -11,7 +11,7 @@ Currently, two official plugins are available:
 
 <be>
 
-Website Link: <a href="https://inkverse-react-app.netlify.app/">Inkverse</a>
+Website Link: <a href="https://inkverse-react-app.netlify.app/" target="_blank">Inkverse</a>
 
 <be>
 
