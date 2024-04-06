@@ -9,15 +9,15 @@ Currently, two official plugins are available:
 
 <h1>Website Name: Inkverse</h1>
 
-<be>
+</br>
 
 Website Link: <a href="https://inkverse-react-app.netlify.app/" target="_blank">Inkverse</a>
 
-<be>
+</br>
 
 <h1>Website Features:</h1>
 
-<be>
+</br>
 
 <ol>
   <li>Responsive Design</li>
@@ -27,4 +27,18 @@ Website Link: <a href="https://inkverse-react-app.netlify.app/" target="_blank">
   <li>Custom Charts Implementation</li>
   <li>Sortable Book Listings</li>
 </ol>
+
+<h1>Website  characteristics:</h1>
+
+</br>
+
+<ol>
+  <li>User-Friendly Interface</li>
+  <li>Simple to Use</li>
+  <li>Visual Data Representation</li>
+  <li>Smooth Navigation Experience</li>
+  <li> Feedback Mechanism</li>
+</ol>
+
+
 
