@@ -3,7 +3,7 @@ import useData from "../../Hooks/Data/useData";
 
 const Authors = () => {
 
-    const data = useData("../../../public/author.json")
+    const data = useData("/author.json")
 
     console.log(data);
     return (

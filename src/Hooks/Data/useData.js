@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 
-const useData = (data="../../../public/books.json") => {
+const useData = (data="/books.json") => {
 
     const [getData, setGetData ] = useState([]);
 
