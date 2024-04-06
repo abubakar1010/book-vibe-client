@@ -1,17 +1,20 @@
 import { useEffect, useState } from "react"
 
 
-const useData = () => {
+const useData = (data="../../../public/books.json") => {
 
     const [getData, setGetData ] = useState([]);
 
     useEffect( () => {
 
-        fetch("books.json")
+
+        fetch(`${data}`)
         .then( response => response.json())
         .then( response => setGetData(response))
 
     },[])
+
+    // console.log(getData,path);
 
     return getData
 

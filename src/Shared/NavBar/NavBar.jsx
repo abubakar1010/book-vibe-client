@@ -65,9 +65,25 @@ const NavBar = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center text-lg">
-          Docs
-        </a>
+        <NavLink to="/bestSellers" className={({isActive}) =>
+                                        `
+                                        ${isActive? "text-[#23BE0A] border border-[#23BE0A] px-3 rounded-md py-2": "text-[#131313CC] hover:text-[#23BE0A]"} `
+                                    }>
+          Best Sellers
+        </NavLink>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <NavLink to="/author" className={({isActive}) =>
+                                        `
+                                        ${isActive? "text-[#23BE0A] border border-[#23BE0A] px-3 rounded-md py-2": "text-[#131313CC] hover:text-[#23BE0A]"} `
+                                    }>
+          Authors
+        </NavLink>
       </Typography>
     </ul>
   );

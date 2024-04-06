@@ -8,6 +8,8 @@ import PageToRead from "../Pages/PageToRead/PageToRead";
 import BooksDetails from "../Components/BooksDeatils/BooksDetails";
 import DisplayReadBooks from "../Components/DisplayReadBooks.jsx/DisplayReadBooks";
 import Wishlist from "../Components/Wishlist/Wishlist";
+import BestSeller from "../Pages/BestSeller/BestSeller";
+import Authors from "../Pages/Authors/Authors";
 
 const router = createBrowserRouter([
     {
@@ -42,6 +44,17 @@ const router = createBrowserRouter([
           element: <PageToRead></PageToRead>,
           loader: () => fetch("../../public/books.json")
         },
+        {
+          path: "/bestSellers",
+          element: <BestSeller />,
+          loader: () => fetch("../../public/books.json")
+        },
+        {
+          path: "author",
+          element: <Authors />,
+          // loader: () => fetch("../../public/books.json")
+        },
+        
         {
           path: "/bookDetails/:id",
           element: <BooksDetails />,

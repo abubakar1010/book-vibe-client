@@ -12,7 +12,8 @@
       "publisher": "Independently published",
       "yearOfPublishing": "2024",
       "learningPoints": "Insight into the roaring twenties and the pursuit of wealth.",
-      "description": "Set in the Jazz Age, this novel follows the enigmatic Jay Gatsby and his obsession with Daisy Buchanan."
+      "description": "Set in the Jazz Age, this novel follows the enigmatic Jay Gatsby and his obsession with Daisy Buchanan.",
+      "sales": 80000000
     },
     {
       "bookId": 2,
@@ -27,7 +28,8 @@
       "publisher": "J. B. Lippincott & Co.",
       "yearOfPublishing": "2023",
       "learningPoints": "Understanding prejudice and compassion.",
-      "description": "Set in the Deep South, this novel tells the story of Atticus Finch defending a black man accused of rape."
+      "description": "Set in the Deep South, this novel tells the story of Atticus Finch defending a black man accused of rape.",
+      "sales": 120000000
     },
     {
       "bookId": 3,
@@ -42,7 +44,8 @@
       "publisher": " O'Reilly Media; 3rd edition",
       "yearOfPublishing": 2022,
       "learningPoints": "Awareness of authoritarian regimes and the erosion of freedom.",
-      "description": "Set in a totalitarian society, this novel follows Winston Smith as he rebels against the oppressive regime."
+      "description": "Set in a totalitarian society, this novel follows Winston Smith as he rebels against the oppressive regime.",
+      "sales": 600000
     },
     {
       "bookId": 4,
@@ -57,7 +60,8 @@
       "publisher": "Dutton",
       "yearOfPublishing": 2024,
       "learningPoints": "Insight into adolescent psychology and societal expectations.",
-      "description": "Narrated by Holden Caulfield, this novel follows his experiences in New York City after being expelled from prep school."
+      "description": "Narrated by Holden Caulfield, this novel follows his experiences in New York City after being expelled from prep school.",
+      "sales": 45020
     },
     {
       "bookId": 5,
@@ -72,7 +76,8 @@
       "publisher": " Hachette Books",
       "yearOfPublishing": 2020,
       "learningPoints": "Insight into the social norms and gender roles of Regency-era England.",
-      "description": "Follow the spirited Elizabeth Bennet as she navigates the intricacies of love, class, and marriage."
+      "description": "Follow the spirited Elizabeth Bennet as she navigates the intricacies of love, class, and marriage.",
+      "sales": 870000
     },
     {
       "bookId": 6,
@@ -87,6 +92,7 @@
       "publisher": "Addison-Wesley Professional",
       "yearOfPublishing": 2019,
       "learningPoints": "Exploration of heroism and the power of friendship.",
-      "description": "Follow Bilbo Baggins as he embarks on a quest to reclaim the Lonely Mountain and its treasure from the dragon Smaug."
+      "description": "Follow Bilbo Baggins as he embarks on a quest to reclaim the Lonely Mountain and its treasure from the dragon Smaug.",
+      "sales": 860000
     }
 ]

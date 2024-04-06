@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "authorImage": "https://i.postimg.cc/DZ2rYVPg/python.jpg",
+      "name": "Wes McKinney",
+      "about": "Since 2007, I have been creating fast, easy-to-use data wrangling and statistical computing tools, mostly in the Python programming language. I am best known for creating the pandas project and writing the book Python for Data Analysis. I am also a contributor to the Apache Arrow, Kudu, and Parquet projects within the Apache Software Foundation. I am currently the CTO and Co-founder of Voltron Data, which builds accelerated computing technologies powered by Apache Arrow. I previously worked for Ursa Labs (within RStudio / Posit), Two Sigma, Cloudera, DataPad, and AQR Capital Management. ",
+      "books": ["Python for Data Analysis"]
+    },
+    {
+        "id": 2,
+        "authorImage": "https://i.postimg.cc/sgKzk7YR/neil.jpg",
+      "name": "Neil Dagger",
+      "about": "Neil is an English author with a Degree In Computer Science from University College London. He is happy for readers to reach out to him for help, feedback or issues on Neil@retiredecadesearly.com.",
+      "books": ["The ChatGPT Millionaire"]
+    },
+    {
+        "id": 3,
+        "authorImage": "https://i.postimg.cc/qv9JnW8m/program.jpg",
+      "name": "Andrew Hunt",
+      "about": "Andrew Hunt is a writer of books on software development and chill scifi. Hunt co-authored the seminal text 'The Pragmatic Programmer,' the popular 'Pragmatic Thinking & Learning', award-winning 'Practices of an Agile Developer', a half-dozen other books and many articles. Andy was one of the 17 original authors of the Agile Manifesto. He and co-author Dave Thomas founded the Pragmatic Bookshelf publishing house, specializing in books for for software developers, testers, and managers.",
+      "books": ["The Pragmatic Programmer"]
+    },
+    {
+        "id": 4,
+        "authorImage": "https://i.postimg.cc/W4L7KbG0/toby.jpg",
+      "name": "Toby Ord",
+      "about": "Toby Ord is a philosopher at Oxford University, working on the big picture questions facing humanity. His earlier work explored the ethics of global poverty, leading him to make a lifelong pledge to donate 10% of his income to the most effective charities helping improve the world. He created a society, Giving What We Can, for people to join this mission, and together its members have pledged over $1.5 billion. He then broadened these ideas by co-founding the Effective Altruism movement in which thousands of people are using reason and evidence to help the lives of others as much as possible. ",
+      "books": ["The Precipice"]
+    }
+  ]
+  
