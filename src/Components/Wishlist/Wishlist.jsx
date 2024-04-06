@@ -1,7 +1,7 @@
 
 import DisplayWishlist from "../DisplayWishlist/DisplayWishlist";
 import { GetWishlistData } from "../../Utils/wishlistLocalStorage";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const Wishlist = () => {
    
     const data = GetWishlistData() || []
@@ -9,6 +9,48 @@ const Wishlist = () => {
     const [menu, setMenu] = useState(false)
 
     // console.log(data);
+
+    const [displayData, setDisplayData] = useState([])
+
+    useEffect( () => {
+
+        setDisplayData(data)
+
+    },[])
+
+    // console.log(data);
+
+    const filterByRating = () => {
+
+        const sortedDataByRating = data.sort( (a, b) => b.rating - a.rating);
+
+
+        console.log(sortedDataByRating);
+
+        setDisplayData(sortedDataByRating)
+
+    }
+
+    const filterByPages = () => {
+
+        const sortedDataByPages = data.sort( (a, b) => b.totalPages - a.totalPages);
+
+
+        console.log(sortedDataByPages);
+
+        setDisplayData(sortedDataByPages)
+    }
+
+    const filterByPublishYear = () => {
+
+        const sortedDataByPublishYear = data.sort( (a, b) => b.yearOfPublishing - a.yearOfPublishing);
+
+
+        console.log(sortedDataByPublishYear);
+
+        setDisplayData(sortedDataByPublishYear)
+    }
+
     return (
         <>
             <div>
@@ -25,14 +67,14 @@ const Wishlist = () => {
 
                 <div id="dropdown" className={`z-10 ${ menu? "block": "hidden"}  divide-y divide-gray-100 rounded-lg shadow w-44 bg-[#1313130D]  `}>
                     <ul className="py-2 text-sm  text-[#131313CC]" aria-labelledby="dropdownDefaultButton">
-                    <li>
-                        <a href="#" className="block px-4 py-2  hover:bg-gray-600 hover:text-white">Rating</a>
+                    <li className="hover:bg-gray-600">
+                        <button onClick={ () => filterByRating()} className="block px-4 py-2   hover:text-white">Rating</button>
                     </li>
-                    <li>
-                        <a href="#" className="block px-4 py-2  hover:bg-gray-600 hover:text-white">Number of pages</a>
+                    <li onClick={ () => filterByPages()} className="hover:bg-gray-600">
+                        <button className="block px-4 py-2   hover:text-white">Number of pages</button>
                     </li>
-                    <li>
-                        <a href="#" className="block px-4 py-2  hover:bg-gray-600 hover:text-white">Publisher year</a>
+                    <li onClick={ () => filterByPublishYear()} className="hover:bg-gray-600">
+                        <button className="block px-4 py-2   hover:text-white">Publisher year</button>
                     </li>
                     
                     </ul>
@@ -42,7 +84,7 @@ const Wishlist = () => {
                 
                 <div className=" my-16  space-y-12">
                     {
-                        data.map( element => <DisplayWishlist key={element.bookId} element={element}></DisplayWishlist>)
+                        displayData.map( element => <DisplayWishlist key={element.bookId} element={element}></DisplayWishlist>)
                     }
                 </div>
             </div>
