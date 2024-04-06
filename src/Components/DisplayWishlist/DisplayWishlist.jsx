@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 const DisplayWishlist = ({element}) => {
     const { bookId, bookName, author, category, rating, tags, image, yearOfPublishing, publisher, totalPages} = element
     return (
-        <div className="  shadow-lg rounded-lg py-8 px-7 flex gap-12  border border-[#13131326]">
+        <div className=" mx-4 shadow-lg rounded-lg py-8 px-7  flex gap-12  border border-[#13131326] flex-col xl:flex-row justify-center items-center ">
             <div className=" w-[340px] bg-[#1313130D] rounded-lg py-7 flex justify-center items-center">
                 <img src={image} alt="" className=" w-[170px] h-[240px] " />
             </div>
@@ -19,11 +19,13 @@ const DisplayWishlist = ({element}) => {
 
             <div className=" flex gap-4 py-4 ">
                         <span className=" text-[#131313] font-bold">Tag: </span>
-                        <div className=" flex gap-3 items-center ">
+                        <div className=" flex flex-col md:flex-row gap-3  ">
 
+                        <div className=" flex gap-4 mb-6">
                         {
                             tags.map( (element,index) => <p className=" bg-[rgba(35,190,10,0.05)] text-[#23BE0A] rounded-full px-6 py-1" key={index}>{element}</p>)
                         }
+                        </div>
                         <div className=" flex gap-3 items-center ml-9">
                             <IoLocationOutline className=" text-xl" />
                             <p>Year of Publishing: {yearOfPublishing}</p>
@@ -42,7 +44,7 @@ const DisplayWishlist = ({element}) => {
                         </div>
                     </div>
 
-                    <div className=" flex gap-6 mt-8">
+                    <div className=" flex flex-col md:flex-row gap-6 mt-8">
                     <p className=" bg-[#328EFF26] text-[#328EFF] rounded-full px-6 py-1">Category: {category}</p>
                     <p className=" bg-[#FFAC3326] text-[#FFAC33] rounded-full px-6 py-1">Rating: {rating}</p>
                     <NavLink to={`/bookDetails/${bookId}`}>

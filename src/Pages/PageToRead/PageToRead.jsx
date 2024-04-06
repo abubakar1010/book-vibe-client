@@ -1,6 +1,6 @@
 
 import { useLoaderData } from "react-router-dom";
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from "recharts";
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from "recharts";
 
 
 
@@ -33,20 +33,25 @@ const PageToRead = () => {
 
 
   return (
-    <div>
+    <div className=" w-[460px] h-[440px] md:w-[770px] md:[42opx] xl:w-[1170px] xl:h-[540px] ">
+      <ResponsiveContainer width="100%" height="100%">
       <BarChart
-      width={1270}
-      height={540}
+      className=""
       data={data}
       margin={{
         top: 20,
-        right: 30,
+        right: 20,
         left: 20,
         bottom: 5
       }}
     >
       <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="bookName" />
+      <XAxis dataKey="bookName"
+        interval={0} // Display every label
+        angle={-20} // Rotate labels by -45 degrees
+        textAnchor="end" // Anchor labels at the end
+        height={120} // Increase height to accommodate rotated labels
+        className="text-xs md:text-base xl:text-lg" />
       <YAxis />
       <Bar
         dataKey="totalPages"
@@ -58,6 +63,7 @@ const PageToRead = () => {
         ))}
       </Bar>
     </BarChart>
+      </ResponsiveContainer>
     </div>
   );
 };

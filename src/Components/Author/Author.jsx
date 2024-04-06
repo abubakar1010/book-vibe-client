@@ -8,8 +8,8 @@ const Author = ({element}) => {
         <>
 
         <div>
-            <div className=' flex items-center gap-16 my-16 shadow-xl border border-[#13131326] py-8 px-6 rounded-lg '>
-                <div className=' bg-[#1313130D] px-8 py-8 rounded-lg w-96 '>
+            <div className=' flex flex-col lg:flex-row items-center gap-16 my-16 shadow-xl border border-[#13131326] py-8 px-6 rounded-lg '>
+                <div className=' bg-[#1313130D] px-8 py-8 rounded-lg w-96 flex justify-center items-center '>
                 <img src={authorImage} className=' w-56 h-56 object-cover rounded-lg' alt="" />
                 </div>
                 <div className=' w-full space-y-8'>
